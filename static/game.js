@@ -2,8 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const board = document.getElementById("game-board");
     const turnIndicator = document.getElementById("turn-indicator");
 
-    board.style.gridTemplateColumns = `repeat(${gridSize}, 80px)`;
-    board.style.gridTemplateRows = `repeat(${gridSize}, 80px)`;
+    // Adjust cell size based on grid size
+    let cellSize;
+    if (gridSize === 3) {
+        cellSize = 80;
+    } else if (gridSize === 4) {
+        cellSize = 70;
+    } else if (gridSize === 5) {
+        cellSize = 60;
+    } else {
+        cellSize = 50; // For grid size 6
+    }
+
+    board.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
+    board.style.gridTemplateRows = `repeat(${gridSize}, ${cellSize}px)`;
 
     let currentPlayer = "X";
     let boardState = Array(gridSize).fill().map(() => Array(gridSize).fill(null));
