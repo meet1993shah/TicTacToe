@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Tic-Tac-Toe</h1>
+        <form method="POST">
+            <div class="input-group">
+                <label for="player1">Player 1 Name:</label>
+                <input type="text" id="player1" name="player1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="player2">Player 2 Name:</label>
+                <input type="text" id="player2" name="player2" required>
+            </div>
+
+            <div class="input-group">
+                <label for="grid_size">Select Grid Size (3-6):</label>
+                <input type="number" id="grid_size" name="grid_size" min="3" max="6" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Start Game</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

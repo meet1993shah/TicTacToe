@@ -1,0 +1,131 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Vibrant gradient */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Increased spacing between rows */
+}
+
+.input-group label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 18px;
+    width: 220px;
+    text-align: center;
+    border: 2px solid #ff6b81;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 30px; /* Added extra space above the button */
+}
+
+button {
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e84118;
+}
+
+/* Game Page Styling */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#turn-indicator {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+/* Grid Styling */
+#game-board {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 10px;
+    background: #ff7eb3;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cell:hover {
+    background-color: #f8a5c2;
+}
+
+/* Player Colors */
+.player1 {
+    color: blue;
+}
+
+.player2 {
+    color: red;
+}
+
+/* Handshake Animation */
+@keyframes shake {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0); }
+    25% { transform: translate(-50%, -48%) rotate(-5deg); }
+    50% { transform: translate(-50%, -50%) rotate(5deg); }
+    75% { transform: translate(-50%, -52%) rotate(-5deg); }
+}
+
+.handshake {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    transform: translate(-50%, -50%);
+    animation: shake 1s ease-in-out infinite;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <script>
+        var gridSize = {{ grid_size }};
+        var player1 = "{{ player1 }}";
+        var player2 = "{{ player2 }}";
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='game.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 id="turn-indicator"></h2>
+        <div id="game-board"></div>
+        <div class="button-container">
+            <button onclick="location.reload()">Restart</button>
+            <button onclick="window.location.href='/'">Back</button>
+        </div>
+    </div>
+</body>
+</html>
